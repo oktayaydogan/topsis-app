@@ -1,0 +1,89 @@
+{
+	"name": "topsis-app",
+	"displayName": "Topsis App",
+	"version": "0.1.0",
+	"description": "This is a simple React and Electron app that uses the TOPSIS method to solve multi-criteria decision-making problems.",
+	"main": "public/electron.js",
+	"author": "Oktay Aydoğan <aydoganooktay@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"homepage": "./",
+	"build": {
+		"icon": "public/logo512.png",
+		"productName": "Topsis App",
+		"files": [
+			"build/**/*",
+			"node_modules/**/*"
+		],
+		"directories": {
+			"buildResources": "assets"
+		}
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"electron": "wait-on http://localhost:3000 && electron .",
+		"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+		"preelectron-pack": "yarn run build",
+		"electron-pack-windows": "electron-builder --win --ia32",
+		"electron-pack-macos": "electron-builder --mac --nosign"
+	},
+	"dependencies": {
+		"react-redux": "^9.1.2"
+	},
+	"devDependencies": {
+		"@reduxjs/toolkit": "^2.2.3",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"concurrently": "^5.3.0",
+		"electron": "^30.0.2",
+		"electron-builder": "^22.8.0",
+		"electron-serve": "^2.0.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-scripts": "^5.0.1",
+		"tailwindcss": "^3.4.3",
+		"wait-on": "^5.2.0",
+		"web-vitals": "^2.1.4"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"keywords": [
+		"cross-platform",
+		"native-app",
+		"installed-app",
+		"desktop-applications",
+		"windows",
+		"linux",
+		"macos",
+		"html",
+		"css",
+		"javascript",
+		"front-end",
+		"declarative",
+		"react",
+		"react-dom",
+		"react-scripts",
+		"electron",
+		"electron-builder",
+		"electron-serve",
+		"concurrently",
+		"wait-on"
+	]
+}
