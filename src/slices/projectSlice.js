@@ -9,7 +9,7 @@ import ResultScreen from "../screens/ResultScreen";
 import ValuesScreen from "../screens/ValuesScreen";
 
 const initialState = {
-	projectName: "Montaj Bankoları İçin Otomasyon Firması Seçimi ",
+	projectName: "",
 	currentStep: 0,
 	screens: [
 		{
