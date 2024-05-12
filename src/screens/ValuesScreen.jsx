@@ -23,7 +23,8 @@ const ValuesScreen = () => {
 	useEffect(() => {
 		if (
 			Object.keys(alternatives).length > 0 &&
-			Object.keys(criterias).length > 0
+			Object.keys(criterias).length > 0 &&
+			Object.keys(matrix).length === 0
 		) {
 			const newValues = {};
 			Object.keys(alternatives).forEach((alternativeId) => {
@@ -65,7 +66,7 @@ const ValuesScreen = () => {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center">
+		<div className="flex flex-col items-center justify-center my-40 gap-5">
 			<div className="w-full border rounded-lg overflow-hidden dark:border-gray-300">
 				<table className="w-full min-w-max table-auto text-left">
 					<caption className="border-b bg-gray-100 p-4 font-bold">
@@ -77,9 +78,9 @@ const ValuesScreen = () => {
 								Alternatifler
 							</th>
 							{Object.keys(criterias).map((id) => (
-								<th key={id} className="bg-gray-50 p-4">
+								<td key={id} className="bg-gray-50 p-4 text-wrap w-20">
 									{criterias[id].criteria} ({criterias[id].weight}%)
-								</th>
+								</td>
 							))}
 						</tr>
 					</thead>
