@@ -15,7 +15,7 @@ const Table = ({ title, headers, data }) => {
 								className={
 									headers.length === index + 1
 										? "border-t border-gray-300 bg-gray-50 px-4 py-2 text-center"
-										: "border-t border-e border-gray-300 bg-gray-50 px-4 py-2 text-center"
+										: "border-t border-e border-gray-300 bg-gray-50 px-4 py-2 text-center text-wrap w-20"
 								}
 							>
 								{header}
